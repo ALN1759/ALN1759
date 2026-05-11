@@ -249,6 +249,50 @@
         .system-preview-container:fullscreen .exit-fullscreen-btn { display: block; }
         .system-preview-container:-webkit-full-screen .exit-fullscreen-btn { display: block; }
         .system-preview-container:-ms-fullscreen .exit-fullscreen-btn { display: block; }
+        /* AJUSTES PARA CELULAR (Telas menores que 768px) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Empilha a barra lateral e o conteúdo */
+    }
+
+    .sidebar {
+        width: 100%; /* Barra lateral ocupa toda a largura no topo */
+        height: auto; 
+        position: relative; /* Deixa de ser fixa para não cobrir o texto */
+        border-right: none;
+        border-bottom: 1px solid #94a3b8;
+        padding: 20px;
+    }
+
+    .profile-pic {
+        width: 80px; /* Foto menor no celular para economizar espaço */
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove o recuo da barra lateral */
+        width: 100%;
+        padding: 20px; /* Reduz o respiro lateral no celular */
+    }
+
+    .header-title {
+        font-size: 1.8rem; /* Título menor para não quebrar linha */
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Apenas 1 projeto por linha no celular */
+    }
+
+    .modal-article {
+        margin: 20px auto;
+        padding: 0 15px 50px 15px;
+    }
+}
     </style>
 </head>
 <body>
